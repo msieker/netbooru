@@ -1,0 +1,13 @@
+﻿{
+	"Data": {
+		"DefaultConnection": {
+			"ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=Netbooru;Trusted_Connection=True;MultipleActiveResultSets=true"
+		}
+	},
+	"EntityFramework": {
+		"NetbooruDbContext": {
+			//"ConnectionStringKey": "Data:DefaultConnection:ConnectionString"
+			"ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=Netbooru;Trusted_Connection=True;MultipleActiveResultSets=true"
+		}
+	}
+}
