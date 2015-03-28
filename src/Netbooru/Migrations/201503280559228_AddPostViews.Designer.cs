@@ -7,9 +7,25 @@ using System;
 namespace Netbooru.Migrations
 {
     [ContextType(typeof(Netbooru.Models.NetbooruDbContext))]
-    public class NetbooruDbContextModelSnapshot : ModelSnapshot
+    public partial class AddPostViews : IMigrationMetadata
     {
-        public override IModel Model
+        string IMigrationMetadata.MigrationId
+        {
+            get
+            {
+                return "201503280559228_AddPostViews";
+            }
+        }
+        
+        string IMigrationMetadata.ProductVersion
+        {
+            get
+            {
+                return "7.0.0-beta3-12166";
+            }
+        }
+        
+        IModel IMigrationMetadata.TargetModel
         {
             get
             {
@@ -30,6 +46,7 @@ namespace Netbooru.Migrations
                             .GenerateValueOnAdd();
                         b.Property<string>("Key");
                         b.Property<int?>("PostId");
+                        b.Property<int?>("UploadId");
                         b.Property<string>("Value");
                         b.Key("Id");
                     });
@@ -74,18 +91,9 @@ namespace Netbooru.Migrations
                         b.Key("Id");
                     });
                 
-                builder.Entity("Netbooru.Models.UploadMetadata", b =>
-                    {
-                        b.Property<int>("Id")
-                            .GenerateValueOnAdd();
-                        b.Property<string>("Key");
-                        b.Property<int?>("UploadId");
-                        b.Property<string>("Value");
-                        b.Key("Id");
-                    });
-                
                 builder.Entity("Netbooru.Models.PostMetadata", b =>
                     {
+                        b.ForeignKey("Netbooru.Models.Upload", "UploadId");
                         b.ForeignKey("Netbooru.Models.Post", "PostId");
                     });
                 
@@ -104,11 +112,6 @@ namespace Netbooru.Migrations
                 builder.Entity("Netbooru.Models.Upload", b =>
                     {
                         b.ForeignKey("Netbooru.Models.Post", "PostId");
-                    });
-                
-                builder.Entity("Netbooru.Models.UploadMetadata", b =>
-                    {
-                        b.ForeignKey("Netbooru.Models.Upload", "UploadId");
                     });
                 
                 return builder.Model;

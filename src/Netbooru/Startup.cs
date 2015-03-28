@@ -31,9 +31,6 @@ namespace Netbooru
 				.AddSqlServer()
 				.AddDbContext<NetbooruDbContext>();
 
-			services.AddIdentity<ApplicationUser, IdentityRole>(Configuration)
-				.AddEntityFrameworkStores<NetbooruDbContext>();
-
 			services.AddMvc();
 		}
 
@@ -57,7 +54,6 @@ namespace Netbooru
 
 			// Add static files to the request pipeline.
 			app.UseStaticFiles();
-			app.UseIdentity();
 
 			app.UseMvc(routes =>
 			{

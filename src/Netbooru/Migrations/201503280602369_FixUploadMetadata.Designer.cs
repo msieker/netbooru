@@ -7,9 +7,25 @@ using System;
 namespace Netbooru.Migrations
 {
     [ContextType(typeof(Netbooru.Models.NetbooruDbContext))]
-    public class NetbooruDbContextModelSnapshot : ModelSnapshot
+    public partial class FixUploadMetadata : IMigrationMetadata
     {
-        public override IModel Model
+        string IMigrationMetadata.MigrationId
+        {
+            get
+            {
+                return "201503280602369_FixUploadMetadata";
+            }
+        }
+        
+        string IMigrationMetadata.ProductVersion
+        {
+            get
+            {
+                return "7.0.0-beta3-12166";
+            }
+        }
+        
+        IModel IMigrationMetadata.TargetModel
         {
             get
             {
