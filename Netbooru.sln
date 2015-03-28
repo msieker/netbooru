@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A413A0C0-A3A5-402E-9D6D-189005168DF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBE0E4A6-D455-48C1-B795-31F8B001365B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Netbooru", "src\Netbooru\Netbooru.kproj", "{27B1E4FA-E47F-4A46-BC06-B833F6436599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27B1E4FA-E47F-4A46-BC06-B833F6436599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B1E4FA-E47F-4A46-BC06-B833F6436599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B1E4FA-E47F-4A46-BC06-B833F6436599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B1E4FA-E47F-4A46-BC06-B833F6436599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27B1E4FA-E47F-4A46-BC06-B833F6436599} = {A413A0C0-A3A5-402E-9D6D-189005168DF4}
+	EndGlobalSection
+EndGlobal
